@@ -6,8 +6,9 @@
   path = .dotfiles/secret/.gitconfig
 
 [core]
-  excludesfile = ~/.gitignore
-  editor       = /usr/bin/vim
+  excludesfile   = ~/.gitignore
+  attributesfile = ~/.gitattributes
+  editor         = /usr/bin/vim
 
 [alias]
   co    = checkout
@@ -25,3 +26,6 @@
 
 [push]
   default = current
+
+[diff "image"]
+  textconv = sh ~/.dotfiles/git/difftools/image.sh
