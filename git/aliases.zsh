@@ -13,3 +13,6 @@ compdef _git gl=git-lig
 
 alias gs='git status'
 compdef _git gs=git-status
+
+alias gd='git diff'
+compdef _git gs=git-diff
