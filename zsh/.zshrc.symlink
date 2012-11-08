@@ -51,4 +51,4 @@ if which rbenv > /dev/null ; then
 fi
 
 # virtualenvwrapper
-source `find /usr -name virtualenvwrapper.sh`
+source `find /usr -name virtualenvwrapper.sh 2>/dev/null`
