@@ -21,3 +21,13 @@
 
 [push]
   default = current
+
+[merge]
+  defaulttoupstream = true
+
+[branch]
+  autosetuprebase = always
+
+[user]
+  name = Paul Osman
+  email = paul@eval.ca

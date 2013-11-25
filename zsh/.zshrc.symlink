@@ -33,6 +33,13 @@ if which brew > /dev/null; then
   export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 fi
 
+# GO
+export GOPATH=$HOME/projects/go
+export PATH=$PATH:$GOPATH/bin
+
+# ML
+export PATH=/usr/local/smlnj-110.75/bin:$PATH
+
 # Android
 if [ -d /usr/local/Cellar/android-sdk/r20 ]; then
   export ANDROID_HOME=/usr/local/Cellar/android-sdk/r20
@@ -51,4 +58,14 @@ if which rbenv > /dev/null ; then
 fi
 
 # virtualenvwrapper
-source `find /usr -name virtualenvwrapper.sh 2>/dev/null`
+if [ -f "$HOME/.virtualenvpath" ]; then
+   export VIRTUALENV_BINARY=`cat "$HOME/.virtualenvpath"`
+else
+   export VIRTUALENV_BINARY=`find /usr/share /usr/local -name virtualenvwrapper.sh 2>/dev/null`
+   echo $VIRTUALENV_BINARY > "$HOME/.virtualenvpath"
+fi
+
+source $VIRTUALENV_BINARY
+
+# Chef
+export PATH="$PATH:/opt/chef/embedded/bin"

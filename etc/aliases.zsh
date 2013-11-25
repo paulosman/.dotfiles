@@ -3,3 +3,4 @@ alias soundcloud-logo='print -P "%F{172}" && cat ~/.dotfiles/ascii-art/soundclou
 alias ,='ls -alhG'
 alias m=more
 alias c=clear
+alias fuckit='git reset --hard'
