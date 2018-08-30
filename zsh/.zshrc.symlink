@@ -57,15 +57,21 @@ if which rbenv > /dev/null ; then
   eval "$(rbenv init -)"
 fi
 
-# virtualenvwrapper
-if [ -f "$HOME/.virtualenvpath" ]; then
-   export VIRTUALENV_BINARY=`cat "$HOME/.virtualenvpath"`
-else
-   export VIRTUALENV_BINARY=`find /usr/share /usr/local -name virtualenvwrapper.sh 2>/dev/null`
-   echo $VIRTUALENV_BINARY > "$HOME/.virtualenvpath"
-fi
-
-source $VIRTUALENV_BINARY
-
 # Chef
 export PATH="$PATH:/opt/chef/embedded/bin"
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+export USE_LOCAL_DOCKER=1
+
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/vault vault
+
+# The next line updates PATH for the Google Cloud SDK.
+export CLOUDSDK_PYTHON=/Users/posman/.pyenv/shims/python
+if [ -f '/Users/posman/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/posman/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/posman/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/posman/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
