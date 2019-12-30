@@ -24,3 +24,40 @@ DerivedData
 
 # node
 node_modules/
+
+# gradle
+# Gradle
+build
+gradle.properties
+.gradle
+local.properties
+out
+
+# intellij
+.idea
+*.iml
+
+# Eclipse
+.classpath
+.project
+.settings
+.gitignore
+bin
+
+# OS X
+.DS_Store
+
+# Emacs
+*~
+\#*\#
+
+# Maven (examples)
+target
+
+# Bazel
+bazel-bin
+bazel-examples
+bazel-genfiles
+bazel-grpc-java
+bazel-out
+bazel-testlogs

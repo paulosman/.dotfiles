@@ -12,6 +12,8 @@ if has("multi_byte")
   set fileencodings=ucs-bom,utf-8,latin1
 endif
 
+set runtimepath+=~/.vim_runtime
+
 " Switch between relative and absolute line numbers
 " when entering or leaving insert mode
 set rnu
@@ -72,3 +74,7 @@ set ts=4
 :autocmd Filetype scala set shiftwidth=2
 :autocmd Filetype scala set smarttab
 
+try
+source ~/.vim_runtime/my_configs.vim
+catch
+endtry
