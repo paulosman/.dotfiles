@@ -51,3 +51,24 @@ highlight SpecialKey ctermfg=DarkGrey
 
 " Color line numbers
 highlight LineNr ctermfg=DarkGrey
+
+filetype plugin indent on
+set sw=4
+set ts=4
+:autocmd Filetype ruby set softtabstop=0
+:autocmd Filetype ruby set sw=2
+:autocmd Filetype ruby set ts=2
+:autocmd Filetype ruby set tabstop=8
+:autocmd Filetype ruby set expandtab
+:autocmd Filetype ruby set shiftwidth=2
+:autocmd Filetype ruby set smarttab
+:autocmd Filetype ruby nmap \r :w<CR>:!ruby %<CR>
+
+:autocmd Filetype scala set softtabstop=0
+:autocmd Filetype scala set sw=2
+:autocmd Filetype scala set ts=2
+:autocmd Filetype scala set tabstop=8
+:autocmd Filetype scala set expandtab
+:autocmd Filetype scala set shiftwidth=2
+:autocmd Filetype scala set smarttab
+
